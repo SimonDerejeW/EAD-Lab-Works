@@ -34,7 +34,7 @@ public class BookRegisterServlet extends HttpServlet {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
         
-        ApplicationContext context = new ClassPathXmlApplicationContext("beansConfig.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
         DBConnectionManager dbConnectionManager = context.getBean("dbConnectionManager", DBConnectionManager.class);
 
         try {

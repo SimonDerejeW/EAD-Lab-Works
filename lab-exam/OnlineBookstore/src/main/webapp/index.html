@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab Exam</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h2 {
+            text-align: center;
+            color: #555;
+        }
+
+        form {
+            background: #fff;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        label {
+            font-size: 14px;
+            font-weight: bold;
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Online Bookstore</h2>
+
+        <form action="register" method="post">
+            <!-- Task Description -->
+            <label for="title">Book Title:</label>
+            <input type="text" id="title" name="title" placeholder="Enter book title" required>
+
+            <!-- Task Status -->
+            <label for="author">Book Author:</label>
+            <input type="text" id="author" name="author" placeholder="Enter book author" required>
+
+            <!-- Due Date -->
+            <label for="price">Price:</label>
+            <input id="price" name="price" required placeholder = "Enter book price">
+
+            <!-- Submit Button -->
+            <button type="submit">Register Book</button>
+        </form>
+
+        <a href="displayBooks">View All Books</a>
+
+        <form action="deleteBook" method="post">
+            <!-- Task ID -->
+            <label for="book_id">Book ID:</label>
+            <input type="number" id="book_id" name="id" placeholder="Enter book ID to delete" required>
+
+            <!-- Submit Button -->
+            <button type="submit">Delete Book</button>
+        </form>
+
+        <form action="searchBooks" method="get">
+            <!-- Search Description -->
+            <label for="search_title">Search Title:</label>
+            <input type="text" id="search_title" name="title" placeholder="Enter title to search" required>
+
+            <!-- Submit Button -->
+            <button type="submit">Search Title</button>
+        </form>
+    </div>
+</body>
+</html>
